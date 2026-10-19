@@ -17,7 +17,7 @@ st.caption("Paper trading only • Public market data • No exchange keys • N
 
 with st.sidebar:
     st.header("Bot settings")
-    exchange_name = st.selectbox("Market data source", ["Binance", "Kraken", "Coinbase"], index=0)
+    exchange_name = st.selectbox("Market data source", ["Binance", "Kraken", "Coinbase"], index=1)
     symbol = st.selectbox("Trading pair", ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BTC/USD", "ETH/USD"], index=0)
     timeframe = st.selectbox("Candlestick timeframe", ["5m", "15m", "1h", "4h"], index=1)
     starting_cash = st.number_input("Starting paper cash (USD)", min_value=100.0, max_value=1_000_000.0, value=10_000.0, step=500.0)
